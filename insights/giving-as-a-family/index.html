@@ -7,7 +7,7 @@ window.__rp=function(){var p=location.pathname.replace(/^\/+|\/+$/g,'').replace(
 function __go(){window.dispatchEvent(new HashChangeEvent('hashchange'))}
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="/"]');if(!a||a.hasAttribute('data-full')||a.target==='_blank'||e.metaKey||e.ctrlKey||e.shiftKey)return;var u=a.getAttribute('href');if(/\.(webp|jpg|png|pdf|xml|txt|ico)$/.test(u))return;e.preventDefault();if(u!==location.pathname){history.pushState(null,'',u)}__go()},false);
 window.addEventListener('popstate',__go);
-</script>
+</script><script>try{if(sessionStorage.getItem("ent_seen"))document.documentElement.classList.add("pl-skip");sessionStorage.setItem("ent_seen","1")}catch(e){}</script><style>.pl-skip #pl{display:none!important}</style>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Giving as a family | Entruvant Insights</title><link rel="canonical" href="https://www.entruvant.com/insights/giving-as-a-family/">
 <link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#0A2240">
@@ -716,7 +716,7 @@ function fromHash(){var m=('#'+__rp()).match(/^#journey\/(\w[\w-]*)/);var ix=0;i
 window.addEventListener('hashchange',fromHash);fromHash()})();</script><script>(function(){
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 /* preloader */
-var pl=document.getElementById('pl');if(pl){if(rm){pl.remove()}else{document.body.classList.add('pl-on');var bar=pl.querySelector('i'),p=0,t=setInterval(function(){p=Math.min(92,p+Math.random()*7);bar.style.width=p+'%'},180);function done(){clearInterval(t);bar.style.width='100%';setTimeout(function(){pl.classList.add('out');document.body.classList.remove('pl-on');setTimeout(function(){pl.remove()},1100)},380)}var t0=Date.now(),fin=false;function go(){if(fin)return;fin=true;setTimeout(done,Math.max(0,2700-(Date.now()-t0)))}if(document.readyState==='complete')go();else addEventListener('load',go);setTimeout(go,5000)}}
+var pl=document.getElementById('pl');if(pl){if(rm||document.documentElement.classList.contains('pl-skip')){pl.remove()}else{document.body.classList.add('pl-on');var bar=pl.querySelector('i'),p=0,t=setInterval(function(){p=Math.min(92,p+Math.random()*7);bar.style.width=p+'%'},180);function done(){clearInterval(t);bar.style.width='100%';setTimeout(function(){pl.classList.add('out');document.body.classList.remove('pl-on');setTimeout(function(){pl.remove()},1100)},380)}var t0=Date.now(),fin=false;function go(){if(fin)return;fin=true;setTimeout(done,Math.max(0,2700-(Date.now()-t0)))}if(document.readyState==='complete')go();else addEventListener('load',go);setTimeout(go,5000)}}
 /* motion buttons */
 var A='<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5"/></svg>';
 document.querySelectorAll('.btn').forEach(function(b){if(b.querySelector('.mb')||b.children.length&&!b.querySelector('svg'))return;var tx=b.textContent.trim();if(!tx)return;var ic=b.querySelector('svg');b.innerHTML='';if(ic)b.appendChild(ic);var m=document.createElement('span');m.className='mb';m.innerHTML='<span></span><span aria-hidden="true"></span>';m.children[0].textContent=tx;m.children[1].textContent=tx;b.appendChild(m);if(!ic){var a=document.createElement('span');a.className='ma';a.innerHTML=A+A;b.appendChild(a)}});
